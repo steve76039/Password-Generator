@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">  
+    <script src="script.js"></script>
+    <title>Password Generator</title>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <form action="">
+        <div id="results"></div>
+        <div id="charTypes">
+            <input type="checkbox" name="uppers" class="charType" onclick="clickCharType()"> <label for="uppers">ABC</label>
+            <input type="checkbox" name="lowers" class="charType" onclick="clickCharType()"> <label for="lowers">abc</label>
+            <input type="checkbox" name="numbs" class="charType" onclick="clickCharType()"> <label for="numbs">123</label>
+            <input type="checkbox" name="symbs" class="charType" onclick="clickCharType()"> <label for="symbs">&#@</label>
+        <script type="text/javascript">
+            window.onload = function() {
+                var allCharTypes = document.getElementsByClassName("charType");
+                    for(var i = 0; i<allCharTypes.length; i++) {
+                        allCharTypes[i].checked = true;
+                    }
+                };            
+        </script>
+        </div>
+
+        <div class="length">
+            <label for="lengthSelect">Password Length</label>
+            <input type="number" name="lengthSelect" id="lengthSelect" min="5" max="60" value="10" size="3"> 
+        </div>
+        
+        <div id="buttons">
+            <input type="button" value="Generate" name="run" id="run" onclick="getPassword()">  
+            <input type="button" value="Copy" name="copy" id="copy" onclick="copyPassword()"> 
+        </div>
+
+        <div id="errorNoCharTypesClicked">
+            C'mon, you've gotta choose at least one character type! 
+        </div>
+
+    </form>
+</body>
+</html>

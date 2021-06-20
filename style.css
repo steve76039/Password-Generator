@@ -1,0 +1,45 @@
+/* body {
+    background-image: url('jason-dent-3wPJxh-piRw-unsplash.jpg');
+    background-size: cover;
+} */
+
+h1 {
+    text-align: center;
+    /* color: white; */
+}
+
+#results {
+    font-family: 'Courier Prime', monospace;
+    margin: 0 auto;
+    padding: 4vh 4vw;
+    font-size: 24pt;
+    text-align: center;
+    border: 2px solid black;
+    /* color: white; */
+    width: 80%;
+    height: 8vh;
+}
+
+#charTypes, .length, #buttons {
+    /* color: white;  */
+    padding: 6pt;
+    text-align: center;
+    display: block;
+}
+
+label {
+    font-size: 16pt;
+}
+
+input {
+    font-size: 16pt;
+    margin-left: 10pt;
+}
+
+#errorNoCharTypesClicked {
+    display: none;
+    background-color: yellow;
+    padding: 6pt;
+    text-align: center;
+    font-size: 16pt;
+}
